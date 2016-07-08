@@ -1,0 +1,24 @@
+<meta property="fb:app_id" content="<%= config[:fb_app_id] %>">
+<meta property="fb:pages" content="889230344473781">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="<%= title_meta %>">
+<meta property="og:description" content="<%= description_meta %>">
+<meta property="og:updated_time" content="<%= xml_timestamp(updated_on_meta) %>">
+<meta property="og:url" content="<%= canonical_url_meta %>">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="<%= config[:title] %>">
+
+<meta property="og:image" content="<%= image_path config[:logo], absolute: true %>">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1172">
+<meta property="og:image:height" content="950">
+
+<meta property="article:author" content="<%= config[:company_url] %>">
+<meta property="article:section" content="<%= category_meta %>">
+<meta property="article:published_time" content="<%= xml_timestamp(published_on_meta) %>">
+<meta property="article:modified_time" content="<%= xml_timestamp(updated_on_meta) %>">
+
+<% tags_meta.each do |tag| %>
+  <meta property="article:tag" content="<%= tag %>">
+<% end %>

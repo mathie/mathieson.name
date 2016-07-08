@@ -1,0 +1,113 @@
+<section id="contact" class="block">
+  <div class="container">
+    <h2 class="block-title">
+      Get in touch
+    </h2>
+
+    <p class="lead">
+      Please do get in touch if you'd like me to help out on your product. I'd be delighted to get involved! The best way to get in touch is to drop me an email &ndash; use the button below &ndash; or click on the speech bubble at the bottom right hand side and leave me a message.
+    </p>
+
+    <p class="text-center">
+      <% mail_to_link title: "Send an emil to #{config[:default_email_address]}", class: 'btn btn-lg btn-primary' do %>
+        <span class="icon icon-mail"></span>
+        Send me an email
+      <% end %>
+    </p>
+
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Social Media</h3>
+
+        <p>
+          You can find me on most of the social media platforms. Here are the Wossname Industries 'corporate' (hehe) accounts, which stay mostly on topic:
+        </p>
+
+        <ul class="list-inline text-center h2 p-y-md">
+          <li>
+            <a href="https://twitter.com/wossname" title="Follow Wossname Industries on Twitter" target="_blank" data-toggle="tooltip" data-placement="bottom">
+              <span class="icon icon-twitter"></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/wossnameindustries" title="Like Wossname Industries on Facebook" target="_blank" data-toggle="tooltip" data-placement="bottom">
+              <span class="icon icon-facebook"></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/wossname" title="Check out Wossname Industries' open source projects on GitHub" target="_blank" data-toggle="tooltip" data-placement="bottom">
+              <span class="icon icon-github"></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://plus.google.com/+WossnameIndustries" title="Find Wossname Industries on Google+" target="_blank" data-toggle="tooltip" data-placement="bottom">
+              <span class="icon icon-google-plus"></span>
+            </a>
+          </li>
+          <li>
+            <a href="/feed.xml" type="application/rss+xml" title="Subscribe to the Wossname Industries RSS feed" target="_blank" data-toggle="tooltip" data-placement="bottom">
+              <span class="icon icon-rss"></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/wossname-industries" title="Discover Wossname Industries on LinkedIn" target="_blank" data-toggle="tooltip" data-placement="bottom">
+              <span class="icon icon-linkedin"></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://blog.woss.name/" title="Follow Wossname Industries on Medium" target="_blank" data-toggle="tooltip" data-placement="bottom">
+              <span class="icon icon-medium"></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://apple.news/T4MCnF6J3T2uzKvL_Hf-Rkw" title="Subscribe to Wossname Industries on Apple News" target="_blank" data-toggle="tooltip" data-placement="bottom">
+              <span class="icon icon-news"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-md-6">
+        <h3>Address</h3>
+
+        <p>
+          Wossname Industries is based in Devon, in the South West of England. It's a beautiful part of the world! I've got beaches, and cliffs, and moors, and the city of Exeter, all within easy reach of home. The weather's not too bad, either.
+        </p>
+
+        <div class="row">
+          <address class="col-sm-6">
+            <strong>Wossname Industries</strong><br>
+            11 Alexandra Terrace<br>
+            Teignmouth<br>
+            Devon. TQ14 8HA<br>
+            United Kingdom
+          </address>
+
+          <div class="col-sm-6">
+            <ul class="list-unstyled">
+              <li>
+                <strong>Email:</strong>
+                <%= mail_to_link %>
+              </li>
+
+              <li>
+                <strong>Call:</strong>
+                <a href="tel:+44-7949-077744">+44 (0)7949 077744</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <a class="twitter-timeline" data-theme="light" data-height="600" href="https://twitter.com/wossname">Latest tweets by @wossname</a>
+      </div>
+
+      <div class="col-md-6">
+        <iframe width="100%" height="600" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJN8WlhDUJbUgRdnGyBQPRe6E&key=AIzaSyA4egPXM_hjICMDiziZfrrfKEATWbM6AsM" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>

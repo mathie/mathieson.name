@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
+  <head>
+    <%= partial 'partials/metadata' %>
+
+    <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Amatica+SC:700%7CJosefin+Slab%7CSpecial+Elite' %>
+    <%= stylesheet_link_tag :all %>
+  </head>
+
+  <% if current_page.data.contents %>
+    <body class="<%= page_classes %>" data-spy="scroll" data-target="#sidebar-contents">
+  <% else %>
+    <body class="<%= page_classes %>">
+  <% end %>
+
+    <%= partial 'partials/google_tag_manager' %>
+
+    <main id="main">
+      <%= yield %>
+    </main>
+
+    <footer class="navbar navbar-inverse navbar-fixed-bottom hidden-xs hidden-sm">
+      <div class="navbar-header">
+        <div class="navbar-text">
+          Copyright &copy; 2015&ndash;<%= Date.today.year %>
+          <%= utm_link_to config[:company], config[:company_url] %>.
+        </div>
+      </div>
+
+      <div class="navbar-text">
+        <div class="g-plusone"></div>
+      </div>
+
+      <div class="navbar-text m-t-0">
+        <div class="fb-like" data-width="200" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+      </div>
+
+      <ul class="nav navbar-nav navbar-right m-r-lg">
+        <li><%= link_to 'Privacy Policy', '/privacy-policy.html' %></li>
+        <li><%= link_to 'Terms of Service', '/terms-of-service.html' %></li>
+      </ul>
+    </footer>
+
+    <%= javascript_include_tag :all %>
+  </body>
+</html>

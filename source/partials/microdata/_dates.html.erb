@@ -1,0 +1,8 @@
+<% if (updated_on = page.data.updated_on) %>
+  Published <%= time_tag page.data.published_on, itemprop: 'dateCreated datePublished', class: 'op-published' %>
+  (updated <%= time_tag updated_on, itemprop: 'dateModified', class: 'op-modified' %>)
+  <meta itemprop="copyrightYear" content="<%= updated_on.year %>">
+<% else %>
+  Published <%= time_tag page.data.published_on, itemprop: 'dateCreated datePublished dateModified', class: 'op-published op-modified' %>
+  <meta itemprop="copyrightYear" content="<%= page.data.published_on.year %>">
+<% end %>

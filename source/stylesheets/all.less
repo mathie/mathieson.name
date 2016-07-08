@@ -1,0 +1,101 @@
+@import "toolkit-startup";
+@import (inline) "bigfoot-number.css";
+
+@import "code";
+
+@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:       "Josefin Slab", Georgia, "Times New Roman", Times, serif;
+@font-family-monospace:   "Special Elite", Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-base:        @font-family-sans-serif;
+@headings-font-family: "Amatica SC", @font-family-sans-serif;
+
+@font-size-base: 22px;
+@brand-primary: #D87467;
+
+body {
+  position: relative;
+  padding-bottom: 50px;
+  font-family: @font-family-serif;
+}
+
+h1 {
+  .text-center();
+}
+
+h2, h3, h4, h5, h6 {
+  .text-left();
+}
+
+p, li, address {
+  .text-justify();
+}
+
+code {
+  color: inherit;
+  background-color: inherit;
+}
+
+time {
+  cursor: help;
+  border-bottom: 1px dotted @abbr-border-color;
+}
+
+nav.navbar, .btn {
+  font-family: @headings-font-family;
+}
+
+.block-foreground p:first-child {
+  .lead();
+}
+
+code {
+  font-size: 75%;
+}
+
+pre {
+  font-weight: 100;
+  letter-spacing: 0;
+  font-size: (@font-size-base * 0.75);
+  color: @gray;
+
+  .pre-scrollable();
+}
+
+.block-fill-height {
+  // Boostrap defaults the full height to '110vh' -- which I guess is 110% of
+  // the full height. This is slightly suboptimal in that it means the
+  // vertically centered content isn't quite centred. I've a feeling they do
+  // it for a reason, though... And who am I to know? I hadn't heard of 'vh'
+  // units before!
+  height: 100vh;
+}
+
+#introduction {
+  .block();
+  .block-fill-height();
+  .block-paralax();
+  .text-center();
+
+  h1 {
+    .h1.block-title();
+  }
+
+  h2 {
+    .h3();
+    .text-center();
+    .m-t-0();
+  }
+
+  .landing-page & {
+    .block-inverse();
+    background-image: url(/images/introduction-background.jpg);
+
+    p { .lead(); }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  a.header-link {
+    color: inherit;
+  }
+}

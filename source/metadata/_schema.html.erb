@@ -1,0 +1,42 @@
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "<%= url_for('/index.html', absolute: true) %>",
+    "email": "<%= config[:default_email_address] %>",
+    "logo": "<%= image_path config[:logo], absolute: true %>",
+    "contactPoint" : [
+      {
+        "@type" : "ContactPoint",
+        "telephone" : "<%= config[:telephone].gsub(/\(0\)/, '').gsub(/ +/, '-') %>",
+        "email": "<%= config[:default_email_address] %>",
+        "contactType" : "customer service"
+      }
+
+    ],
+    "address": {
+      "streetAddress": "11 Alexandra Terrace",
+      "addressLocality": "Teignmouth",
+      "addressRegion": "Devon",
+      "postalCode": "TQ14 8HA",
+      "addressCountry": "GB"
+    },
+    "sameAs" : [
+      <%= config[:related].map { |_, url| "\"#{url_for url, absolute: true}\"" }.join(",\n") %>
+    ]
+  }
+</script>
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "<%= config[:title] %>",
+    "url": "<%= url_for('/index.html', absolute: true) %>",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "<%= url_for '/search.html', absolute: true, query: { q: '{search_term_string}' } %>",
+      "query-input": "required name=search_term_string"
+    }
+  }
+</script>

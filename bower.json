@@ -1,0 +1,21 @@
+{
+  "name": "mathieson.name",
+  "description": "The Mathieson Family",
+  "main": "",
+  "authors": [
+    "Graeme Mathieson"
+  ],
+  "license": "MIT",
+  "homepage": "https://mathieson.name/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.4",
+    "moment": "^2.13.0",
+    "bigfoot": "^2.1.4"
+  }
+}

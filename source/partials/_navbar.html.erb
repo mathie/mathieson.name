@@ -1,0 +1,34 @@
+<% if content_for?(:navbar) %>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-primary">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">
+          <h1 id="wossname-industries-logo" class="text-hide hidden-xs hidden-sm"><%= config[:title] %></h1>
+          <h1 id="wossname-industries-logo-sm" class="text-hide visible-xs visible-sm"><%= config[:title] %></h1>
+        </a>
+      </div>
+
+      <div class="navbar-collapse collapse" id="navbar-collapse-primary">
+        <form class="navbar-form navbar-right visible-lg" role="search" action="/search/" method="get" id="search-form">
+          <div class="input-group input-group-sm">
+            <label class="sr-only" for="search">Search <%= config[:company] %>' Projects</label>
+            <input type="search" id="search" name="q" class="form-control" placeholder="Search for&hellip;">
+            <span class="input-group-btn">
+              <button type="submit" class="btn btn-primary">Go!</button>
+            </span>
+          </div>
+        </form>
+
+        <ul class="nav nav-bordered navbar-nav navbar-right">
+          <%= yield_content :navbar %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<% end %>
