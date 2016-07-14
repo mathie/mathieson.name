@@ -22,7 +22,7 @@
       "addressCountry": "GB"
     },
     "sameAs" : [
-      <%= config[:related].map { |_, url| "\"#{url_for url, absolute: true}\"" }.join(",\n") %>
+      <%= (config[:related] || {}).map { |_, url| "\"#{url_for url, absolute: true}\"" }.join(",\n") %>
     ]
   }
 </script>

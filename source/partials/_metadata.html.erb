@@ -19,7 +19,7 @@
 <link rel="canonical" href="<%= canonical_url_meta %>">
 <link rel="publisher" href="https://plus.google.com/<%= config[:google_plus_id] %>">
 
-<% config[:related].each do |_, url| %>
+<% (config[:related] || {}).each do |_, url| %>
   <link rel="me" href="<%= url %>">
 <% end %>
 

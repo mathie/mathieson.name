@@ -28,13 +28,6 @@ TEXT
 config[:gtm_id]         = 'GTM-KLSLNV'
 config[:google_plus_id] = '103001545622534344345'
 config[:fb_app_id]      = '619490114749622'
-config[:related]        = {
-  twitter:  'https://twitter.com/wossname',
-  facebook: 'https://www.facebook.com/wossname-industries',
-  google:   'https://plus.google.com/+WossnameIndustries',
-  linkedin: 'https://www.linkedin.com/company/wossname-industries',
-  github:   'https://github.com/wossname'
-}
 
 config[:affiliate_tags] = {
   amazon: {
