@@ -25,9 +25,9 @@ config[:default_description] = <<-TEXT
 TEXT
 
 # Identifiers for various other services.
-config[:gtm_id]         = 'GTM-KLSLNV'
+config[:gtm_id]         = 'GTM-MMFMBQ'
 config[:google_plus_id] = '103001545622534344345'
-config[:fb_app_id]      = '619490114749622'
+config[:fb_app_id]      = '651197725035649'
 
 config[:affiliate_tags] = {
   amazon: {
